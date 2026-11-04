@@ -1,35 +1,35 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-white pt-20 pb-12 border-t border-white/10 relative overflow-hidden">
+    <footer className="bg-[#0a0a0a] text-white pt-16 sm:pt-20 pb-10 sm:pb-12 border-t border-white/10 relative overflow-hidden">
       {/* Subtle background glow */}
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-[#5AE05A]/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[350px] sm:w-[500px] h-[250px] sm:h-[300px] bg-[#5AE05A]/5 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 pb-12 sm:pb-16 border-b border-white/10">
           
           {/* Brand Info */}
-          <div className="lg:col-span-5">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="sm:col-span-2 lg:col-span-5">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <img
                 src="/assets/extracted_p1_0.png"
                 alt="Ecore Logo"
-                className="h-10 w-auto object-contain bg-white rounded-lg p-1.5"
+                className="h-9 sm:h-10 w-auto object-contain bg-white rounded-lg p-1.5"
                 onError={(e) => {
                   e.target.style.display = 'none'
                 }}
               />
-              <span className="text-2xl font-black tracking-tight text-white">
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-white">
                 ECORE <span className="font-light text-white/60">LTD.</span>
               </span>
             </div>
 
-            <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
+            <p className="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm mb-5 sm:mb-6">
               Ecore is a strategic mineral exploration and development company registered with
               the Corporate Affairs Commission (CAC) and a member of solid mineral producers.
               Headquartered in Abuja FCT, West Africa. Founded in 2023.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-[#5AE05A]">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-[11px] text-[#5AE05A]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#5AE05A]" />
               CAC Registered & Licensed Operator
             </div>
@@ -37,10 +37,10 @@ export default function Footer() {
 
           {/* Strategic Minerals */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white/50 mb-4">
+            <h4 className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-white/50 mb-3 sm:mb-4">
               Strategic Minerals
             </h4>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-gray-400">
               <li>
                 <a href="#products" className="hover:text-white transition-colors">
                   Battery-Grade Lithium (Li)
@@ -71,10 +71,10 @@ export default function Footer() {
 
           {/* Company & Operations */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white/50 mb-4">
+            <h4 className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-white/50 mb-3 sm:mb-4">
               Navigation
             </h4>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-gray-400">
               <li>
                 <a href="#about" className="hover:text-white transition-colors">
                   About Ecore
@@ -104,19 +104,19 @@ export default function Footer() {
           </div>
 
           {/* Headquarters Info */}
-          <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white/50 mb-4">
+          <div className="sm:col-span-2 lg:col-span-3">
+            <h4 className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-white/50 mb-3 sm:mb-4">
               Headquarters
             </h4>
-            <p className="text-sm text-gray-300 leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-3 sm:mb-4">
               136 Adetokumbo Ademola Crescent,<br />
               Wuse 2, Abuja, FCT<br />
               Nigeria, West Africa
             </p>
-            <p className="text-xs text-gray-400 mb-2">
+            <p className="text-[11px] sm:text-xs text-gray-400 mb-1.5">
               <span className="text-gray-500">Asset Corridor:</span> Central Nigeria Lithium Belt & Kuje
             </p>
-            <p className="text-xs text-gray-400">
+            <p className="text-[11px] sm:text-xs text-gray-400">
               <span className="text-gray-500">Partner:</span> DAROO Limited (Lugbe Project)
             </p>
           </div>
@@ -124,18 +124,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] sm:text-xs text-gray-400 text-center sm:text-left">
           <p>
             © {new Date().getFullYear()} Ecore Ltd. All rights reserved. Registered with CAC Nigeria.
           </p>
-          <div className="flex items-center gap-6">
-            <a href="#privacy" className="hover:text-white transition-colors">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <a href="#about" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="#terms" className="hover:text-white transition-colors">
+            <a href="#operations" className="hover:text-white transition-colors">
               Terms of Engagement
             </a>
-            <a href="#compliance" className="hover:text-white transition-colors">
+            <a href="#sustainability" className="hover:text-white transition-colors">
               Statutory Compliance
             </a>
           </div>
@@ -144,4 +144,3 @@ export default function Footer() {
     </footer>
   )
 }
-

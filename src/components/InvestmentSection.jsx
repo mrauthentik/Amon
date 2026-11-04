@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Zap, Landmark, Gem, ArrowUpRight } from 'lucide-react'
 
 export default function InvestmentSection() {
   const [visible, setVisible] = useState(false)
@@ -19,25 +20,25 @@ export default function InvestmentSection() {
     <section
       id="investment"
       ref={ref}
-      className="py-24 lg:py-32 bg-[#fafbfb] relative overflow-hidden"
+      className="py-16 sm:py-24 lg:py-32 bg-[#fafbfb] relative overflow-hidden"
     >
       {/* Background glow accents */}
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-emerald-100/40 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-blue-100/40 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-10 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-emerald-100/40 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end mb-12 sm:mb-16">
           <div
             className={`lg:col-span-8 transition-all duration-700 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10 text-gray-800 text-[11px] font-bold tracking-[0.2em] uppercase mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10 text-gray-800 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase mb-4">
               <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
               Strategic Growth & Capital
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.05]">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.08]">
               Universal Investment
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-500">
                 Opportunities in Lithium
@@ -50,7 +51,7 @@ export default function InvestmentSection() {
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
               Investment in Ecore offers tremendous advantages. Open to partnerships
               and global institutional investors with strong Return on Investment (ROI)
               and generous government FDI incentives.
@@ -58,48 +59,50 @@ export default function InvestmentSection() {
           </div>
         </div>
 
-        {/* 3 Value Proposition Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        {/* 3 Value Proposition Cards - No Emojis, Clean Lucide Icons */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-12 sm:mb-16">
           {[
             {
               title: 'Booming Macro-Trends',
               highlight: 'Global EV Transition',
               desc: 'Explosive worldwide demand for battery-grade lithium compounds to power the transition to clean mobility and grid-scale storage systems.',
-              icon: '⚡',
+              icon: <Zap className="w-6 h-6 text-amber-500" />,
             },
             {
               title: 'Government Backed',
               highlight: 'FDI Tax Incentives',
               desc: 'The Nigerian federal framework actively supports Direct Foreign Investment with favorable tax holidays, full ownership models, and local beneficiation credits.',
-              icon: '🏛️',
+              icon: <Landmark className="w-6 h-6 text-emerald-600" />,
             },
             {
               title: 'Secured Tier-1 Assets',
               highlight: 'High Grade Deposits',
               desc: 'Exclusive rights secured across 600,000 hectares in the central lithium corridor and Taraba belt, featuring distinct shallow mineralization.',
-              icon: '💎',
+              icon: <Gem className="w-6 h-6 text-blue-500" />,
             },
           ].map((item, i) => (
             <div
               key={i}
-              className={`p-8 rounded-3xl bg-white border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-500 hover:-translate-y-1 ${
+              className={`p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-500 hover:-translate-y-1 ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="text-3xl mb-4">{item.icon}</div>
-              <span className="text-[11px] font-bold text-emerald-600 uppercase tracking-widest block mb-1">
+              <div className="w-12 h-12 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center mb-5">
+                {item.icon}
+              </div>
+              <span className="text-[10px] sm:text-[11px] font-bold text-emerald-600 uppercase tracking-widest block mb-1">
                 {item.highlight}
               </span>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{item.title}</h3>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
 
         {/* Leadership & Strategic Partnership Card with Real PDF Image */}
         <div
-          className={`relative rounded-3xl overflow-hidden bg-[#0d0d0d] text-white p-8 md:p-12 border border-white/10 shadow-2xl transition-all duration-700 delay-200 ${
+          className={`relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0d0d0d] text-white p-6 sm:p-10 lg:p-12 border border-white/10 shadow-2xl transition-all duration-700 delay-200 ${
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -132,16 +135,16 @@ export default function InvestmentSection() {
 
             {/* Leadership Text */}
             <div className="lg:col-span-7 order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[#5AE05A] text-[11px] font-bold uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[#5AE05A] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-4">
                 Leadership & Strategic Alliance
               </div>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4 leading-tight">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-3 sm:mb-4 leading-tight">
                 Decade of Mining Expertise
-                <span className="block text-gray-400 font-normal text-xl sm:text-2xl mt-1">
+                <span className="block text-gray-400 font-normal text-lg sm:text-2xl mt-1">
                   Partnered with DAROO Limited
                 </span>
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
+              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
                 Ecore and Daroo Ltd have established a strategic alliance to collaborate
                 in the exploration of critical solid minerals, mine asset development,
                 and execution of the modern lithium processing plant in Nigeria. Led by
@@ -149,16 +152,17 @@ export default function InvestmentSection() {
                 a decade of extensive experience in the extractive industry across West
                 Africa.
               </p>
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <a
                   href="#contact"
-                  className="px-6 py-3 rounded-full bg-white text-black text-xs font-bold tracking-widest uppercase hover:bg-[#5AE05A] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white text-black text-[11px] font-bold tracking-widest uppercase hover:bg-[#5AE05A] transition-colors"
                 >
-                  Request Investor Deck ↗
+                  <span>Request Investor Deck</span>
+                  <ArrowUpRight className="w-4 h-4" />
                 </a>
                 <a
                   href="#operations"
-                  className="px-6 py-3 rounded-full border border-white/20 text-white text-xs font-bold tracking-widest uppercase hover:bg-white/10 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white text-[11px] font-bold tracking-widest uppercase hover:bg-white/10 transition-colors"
                 >
                   Explore Lugbe Project
                 </a>
@@ -171,4 +175,3 @@ export default function InvestmentSection() {
     </section>
   )
 }
-

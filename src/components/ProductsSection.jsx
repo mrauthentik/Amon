@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 
 const products = [
   {
@@ -52,7 +53,7 @@ function ProductCard({ product, index, visible }) {
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       {/* Image */}
-      <div className="relative h-52 overflow-hidden">
+      <div className="relative h-48 sm:h-52 overflow-hidden">
         <img
           src={product.image}
           alt={product.name}
@@ -60,35 +61,33 @@ function ProductCard({ product, index, visible }) {
         />
         <div className={`absolute inset-0 bg-gradient-to-b ${product.color} mix-blend-multiply`} />
         {/* Number badge */}
-        <div className="absolute top-4 left-4 w-9 h-9 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center">
-          <span className="text-white text-[11px] font-bold">{product.id}</span>
+        <div className="absolute top-4 left-4 w-8 sm:w-9 h-8 sm:h-9 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center">
+          <span className="text-white text-[10px] sm:text-[11px] font-bold">{product.id}</span>
         </div>
-        {/* Arrow */}
+        {/* Arrow Button */}
         <div
-          className="absolute bottom-4 right-4 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:scale-110"
+          className="absolute bottom-4 right-4 w-8 sm:w-9 h-8 sm:h-9 rounded-full flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:scale-110 shadow-md"
           style={{ backgroundColor: product.accent }}
         >
-          <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M7 17L17 7M17 7H7M17 7v10" />
-          </svg>
+          <ArrowUpRight className="w-4 h-4 text-black font-bold" />
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-5 sm:p-6">
         <div className="flex items-start justify-between mb-2">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">
+            <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">
               {product.tagline}
             </p>
-            <h3 className="text-xl font-black text-[#0D0D0D]">{product.name}</h3>
+            <h3 className="text-lg sm:text-xl font-black text-[#0D0D0D]">{product.name}</h3>
           </div>
           <div
-            className="w-3 h-3 rounded-full flex-shrink-0 mt-1"
+            className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full flex-shrink-0 mt-1"
             style={{ backgroundColor: product.accent }}
           />
         </div>
-        <p className="text-gray-600 text-sm leading-relaxed mt-3">
+        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mt-2 sm:mt-3">
           {product.description}
         </p>
       </div>
@@ -102,7 +101,9 @@ export default function ProductsSection() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true)
+      },
       { threshold: 0.1 }
     )
     if (ref.current) observer.observe(ref.current)
@@ -110,22 +111,22 @@ export default function ProductsSection() {
   }, [])
 
   return (
-    <section id="products" ref={ref} className="py-24 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="products" ref={ref} className="py-16 sm:py-24 lg:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div
             className={`transition-all duration-700 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <div className="w-5 h-px bg-[#5AE05A]" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-gray-500">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-gray-500">
                 Products & Services
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-[#0D0D0D] leading-tight max-w-md">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0D0D0D] leading-tight max-w-lg">
               Strategic Minerals for a
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">
                 Greener Future.
@@ -133,18 +134,18 @@ export default function ProductsSection() {
             </h2>
           </div>
           <div
-            className={`max-w-xs transition-all duration-700 delay-200 ${
+            className={`max-w-md transition-all duration-700 delay-200 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
               Ecore offers the best grade of strategic minerals. As the world transitions to a decarbonized future, we supply critical materials essential to battery production and energy storage.
             </p>
           </div>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {products.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} visible={visible} />
           ))}
@@ -152,50 +153,63 @@ export default function ProductsSection() {
 
         {/* Kuje Project Feature */}
         <div
-          className={`mt-16 relative rounded-3xl overflow-hidden transition-all duration-700 delay-300 ${
+          className={`mt-12 sm:mt-16 relative rounded-2xl sm:rounded-3xl overflow-hidden transition-all duration-700 delay-300 ${
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="bg-[#0D0D0D] p-8 md:p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 to-transparent" />
-            <div className="absolute top-0 right-0 w-72 h-72 bg-green-500/10 rounded-full blur-3xl" />
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-full px-4 py-1.5 mb-6">
+          <div className="bg-[#0D0D0D] p-6 sm:p-10 lg:p-12 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 to-transparent pointer-events-none" />
+            <div className="absolute top-0 right-0 w-72 h-72 bg-green-500/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7">
+                <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-full px-3.5 py-1.5 mb-4 sm:mb-6">
                   <span className="w-1.5 h-1.5 bg-[#5AE05A] rounded-full" />
-                  <span className="text-[#5AE05A] text-xs font-semibold uppercase tracking-widest">Featured Project</span>
+                  <span className="text-[#5AE05A] text-[10px] sm:text-xs font-semibold uppercase tracking-widest">
+                    Featured Project
+                  </span>
                 </div>
-                <h3 className="text-3xl font-black text-white mb-4">The Kuje Project</h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-6">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4">
+                  The Kuje Project
+                </h3>
+                <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-6 max-w-xl">
                   Lies within the eastern boundaries of Abuja, Federal Capital Territory. The project spans a contiguous 600,000 hectares (~6 sq km) with distinct near-surface Lithium mineralization scale potential.
                 </p>
-                <div className="flex items-center gap-6">
+
+                {/* Responsive Stats */}
+                <div className="grid grid-cols-3 gap-4 sm:flex sm:items-center sm:gap-8 pt-4 border-t border-white/10">
                   <div>
-                    <p className="text-2xl font-black text-white">600K</p>
-                    <p className="text-white/40 text-xs uppercase tracking-widest">Hectares</p>
+                    <p className="text-xl sm:text-2xl font-black text-white">600K</p>
+                    <p className="text-white/40 text-[10px] sm:text-xs uppercase tracking-widest">Hectares</p>
                   </div>
-                  <div className="w-px h-10 bg-white/20" />
+                  <div className="hidden sm:block w-px h-8 bg-white/20" />
                   <div>
-                    <p className="text-2xl font-black text-white">FCT</p>
-                    <p className="text-white/40 text-xs uppercase tracking-widest">Location</p>
+                    <p className="text-xl sm:text-2xl font-black text-white">FCT</p>
+                    <p className="text-white/40 text-[10px] sm:text-xs uppercase tracking-widest">Location</p>
                   </div>
-                  <div className="w-px h-10 bg-white/20" />
+                  <div className="hidden sm:block w-px h-8 bg-white/20" />
                   <div>
-                    <p className="text-2xl font-black text-white">Li</p>
-                    <p className="text-white/40 text-xs uppercase tracking-widest">Spodumene</p>
+                    <p className="text-xl sm:text-2xl font-black text-white">Li</p>
+                    <p className="text-white/40 text-[10px] sm:text-xs uppercase tracking-widest">Spodumene</p>
                   </div>
                 </div>
               </div>
-              <div className="flex justify-end">
-                <div className="relative">
+
+              {/* Image side */}
+              <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-sm">
                   <img
-                    src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=400&q=80"
-                    alt="Mining site"
-                    className="rounded-2xl w-72 h-48 object-cover"
+                    src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80"
+                    alt="Kuje mining and lithium exploration site"
+                    className="rounded-2xl w-full h-48 sm:h-56 object-cover shadow-lg"
                   />
-                  <div className="absolute -bottom-3 -left-3 bg-[#5AE05A] rounded-xl px-4 py-2">
-                    <p className="text-black text-xs font-black uppercase tracking-wide">Taraba Belt</p>
-                    <p className="text-black/60 text-[10px]">Also active site</p>
+                  <div className="absolute -bottom-3 -left-3 bg-[#5AE05A] rounded-xl px-3 sm:px-4 py-2 shadow-md">
+                    <p className="text-black text-[11px] sm:text-xs font-black uppercase tracking-wide">
+                      Taraba Belt
+                    </p>
+                    <p className="text-black/70 text-[9px] sm:text-[10px] font-semibold">
+                      Also active proven site
+                    </p>
                   </div>
                 </div>
               </div>
@@ -206,4 +220,3 @@ export default function ProductsSection() {
     </section>
   )
 }
-
