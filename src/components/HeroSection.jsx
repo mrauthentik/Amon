@@ -122,40 +122,10 @@ export default function HeroSection() {
               </h3>
 
               {/* Card Subtext */}
-              <p className="text-white/70 text-xs sm:text-[13px] leading-relaxed mb-6 sm:mb-8 max-w-sm">
+              <p className="text-white/70 text-xs sm:text-[13px] leading-relaxed max-w-sm">
                 Comprehensive Solutions, Spanning Mineral Exploration, Direct Lithium Extraction (DLE),
                 Beneficiation, and Worldwide Export Efficiency.
               </p>
-
-              {/* Clients & Avatars Row */}
-              <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <div className="flex -space-x-2.5 overflow-hidden">
-                  <img
-                    className="inline-block h-7 sm:h-8 w-7 sm:w-8 rounded-full ring-2 ring-black object-cover"
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80"
-                    alt="Partner avatar 1"
-                  />
-                  <img
-                    className="inline-block h-7 sm:h-8 w-7 sm:w-8 rounded-full ring-2 ring-black object-cover"
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
-                    alt="Partner avatar 2"
-                  />
-                  <img
-                    className="inline-block h-7 sm:h-8 w-7 sm:w-8 rounded-full ring-2 ring-black object-cover"
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80"
-                    alt="Partner avatar 3"
-                  />
-                </div>
-
-                <div className="text-right">
-                  <p className="text-xs font-bold text-white tracking-wide">
-                    1000K+
-                  </p>
-                  <p className="text-[10px] text-white/50 tracking-wider">
-                    Our Clients Worldwide
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 

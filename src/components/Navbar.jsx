@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '#hero' },
@@ -50,7 +50,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -61,17 +61,6 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-
-        {/* Desktop CTA */}
-        <div className="hidden sm:flex items-center gap-3">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest bg-white text-black px-4 py-2 sm:px-5 sm:py-2.5 rounded-full hover:bg-[#5AE05A] transition-all duration-300 shadow-sm"
-          >
-            <span>Get In Touch</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
-        </div>
 
         {/* Mobile Hamburger Button */}
         <button
@@ -90,7 +79,7 @@ export default function Navbar() {
       {/* Mobile Drawer Menu */}
       <div
         className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          menuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+          menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="bg-black/95 backdrop-blur-xl px-5 sm:px-8 py-5 border-t border-white/10 space-y-2.5 shadow-2xl">
@@ -104,16 +93,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="pt-3">
-            <a
-              href="#contact"
-              className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#5AE05A] text-black text-xs font-bold uppercase tracking-wider shadow-md hover:bg-[#4bc74b] transition-colors"
-              onClick={handleNavClick}
-            >
-              <span>Get In Touch</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-          </div>
         </div>
       </div>
     </header>
