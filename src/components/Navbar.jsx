@@ -29,23 +29,22 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-black/90 backdrop-blur-md shadow-lg py-3'
-          : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-4 sm:py-5'
+          ? 'bg-black/90 backdrop-blur-md shadow-lg py-2.5 sm:py-3'
+          : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-3 sm:py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2.5 group">
-          <img
-            src="/assets/extracted_p1_0.png"
-            alt="Ecore Logo"
-            className="h-8 sm:h-9 w-auto object-contain bg-white rounded-md p-1 group-hover:scale-105 transition-transform"
-            onError={(e) => {
-              e.target.style.display = 'none'
-            }}
-          />
-          <span className="text-white font-bold text-base sm:text-lg tracking-tight">
-            ECORE <span className="font-light text-white/60">LTD.</span>
+        {/* Logo - Reduced size */}
+        <a href="#hero" className="flex items-center gap-2 group">
+          <div className="bg-white px-2 py-0.5 sm:py-1 rounded-md shadow-sm group-hover:scale-105 transition-transform flex items-center justify-center">
+            <img
+              src="/assets/extracted_p1_0.png"
+              alt="Ecore Logo"
+              className="h-5 sm:h-6 w-auto object-contain"
+            />
+          </div>
+          <span className="text-white font-bold text-xs sm:text-sm tracking-widest text-white/90">
+            LTD.
           </span>
         </a>
 
@@ -69,9 +68,9 @@ export default function Navbar() {
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
         >
           {menuOpen ? (
-            <X className="w-6 h-6 transition-transform" />
+            <X className="w-5 h-5 transition-transform" />
           ) : (
-            <Menu className="w-6 h-6 transition-transform" />
+            <Menu className="w-5 h-5 transition-transform" />
           )}
         </button>
       </div>

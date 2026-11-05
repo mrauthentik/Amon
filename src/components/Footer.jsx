@@ -7,21 +7,20 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 pb-12 sm:pb-16 border-b border-white/10">
           
-          {/* Brand Info */}
+          {/* Brand Info with Logo */}
           <div className="sm:col-span-2 lg:col-span-5">
-            <div className="flex items-center gap-3 mb-4 sm:mb-6">
-              <img
-                src="/assets/extracted_p1_0.png"
-                alt="Ecore Logo"
-                className="h-9 sm:h-10 w-auto object-contain bg-white rounded-lg p-1.5"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                }}
-              />
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-white">
-                ECORE <span className="font-light text-white/60">LTD.</span>
+            <a href="#hero" className="inline-flex items-center gap-2.5 mb-5 sm:mb-6 group">
+              <div className="bg-white px-2.5 py-1 sm:py-1.5 rounded-lg shadow-sm group-hover:scale-105 transition-transform flex items-center justify-center">
+                <img
+                  src="/assets/extracted_p1_0.png"
+                  alt="Ecore Logo"
+                  className="h-6 sm:h-7 w-auto object-contain"
+                />
+              </div>
+              <span className="text-white font-bold text-sm sm:text-base tracking-widest text-white/90">
+                LTD.
               </span>
-            </div>
+            </a>
 
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm mb-5 sm:mb-6">
               Ecore is a strategic mineral exploration and development company registered with
