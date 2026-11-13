@@ -39,16 +39,39 @@ export default function ExpertSection() {
             <div className="relative mx-auto max-w-[360px] sm:max-w-[430px] lg:max-w-none">
               {/* Outer soft shadow frame */}
               <div className="relative rounded-2xl sm:rounded-[36px] overflow-hidden shadow-2xl bg-gradient-to-b from-[#6b8c9c]/30 to-[#9db4c0]/20 p-1.5 backdrop-blur-sm border border-white/80">
-                {/* Main Portrait Container */}
+                {/* Mineral exploration illustration */}
                 <div className="relative rounded-xl sm:rounded-[30px] overflow-hidden bg-[#8ca3a6] aspect-[4/5] w-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=85&fit=crop&crop=top"
-                    alt="Ecore Chief Geologist and Mineral Strategist"
-                    className="w-full h-full object-cover object-center filter contrast-[1.03] brightness-[1.02] transform transition-transform duration-700 hover:scale-105"
-                  />
-
-                  {/* Gradient sheen at base */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+                  <svg
+                    viewBox="0 0 400 500"
+                    role="img"
+                    aria-labelledby="expert-illustration-title"
+                    className="w-full h-full"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title id="expert-illustration-title">Illustration of a mineral deposit in a landscape</title>
+                    <defs>
+                      <linearGradient id="expert-sky" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stopColor="#e5f0e9" />
+                        <stop offset="1" stopColor="#afc7b9" />
+                      </linearGradient>
+                      <linearGradient id="expert-crystal" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stopColor="#eff8f2" />
+                        <stop offset="0.48" stopColor="#a5c4b2" />
+                        <stop offset="1" stopColor="#547b69" />
+                      </linearGradient>
+                    </defs>
+                    <rect width="400" height="500" fill="url(#expert-sky)" />
+                    <circle cx="302" cy="112" r="47" fill="#f8f6df" opacity="0.8" />
+                    <path d="M0 281 79 192l62 74 72-111 107 119 80-76v142H0Z" fill="#789987" opacity="0.78" />
+                    <path d="m0 320 94-65 78 68 78-88 150 92v173H0Z" fill="#496f5d" />
+                    <path d="M0 369c82-26 137-8 202 13s128 24 198-2v120H0Z" fill="#b78357" />
+                    <path d="M0 414c80-23 137 6 206 21s125 4 194-19v84H0Z" fill="#8e6244" />
+                    <path d="m202 174 37 64-8 122-46 51-39-52 8-119Z" fill="url(#expert-crystal)" stroke="#f4f7ed" strokeWidth="5" strokeLinejoin="round" />
+                    <path d="m202 174 25 68-3 106-39 63 8-123Z" fill="#d5e5da" opacity="0.72" />
+                    <path d="m160 240 39 4 28-2m-43 57 42 5m-46 57 42 1" fill="none" stroke="#eef5eb" strokeWidth="3" opacity="0.72" />
+                    <path d="M0 369c82-26 137-8 202 13s128 24 198-2M0 414c80-23 137 6 206 21s125 4 194-19" fill="none" stroke="#e3c09d" strokeWidth="3" opacity="0.72" />
+                    <path d="m74 133 5 14 14 5-14 5-5 14-5-14-14-5 14-5Zm235 107 4 11 11 4-11 4-4 11-4-11-11-4 11-4Z" fill="#fffdf0" opacity="0.85" />
+                  </svg>
                 </div>
               </div>
 

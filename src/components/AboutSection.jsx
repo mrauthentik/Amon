@@ -142,8 +142,8 @@ export default function AboutSection() {
                 {/* Rounded Photo */}
                 <div className="rounded-2xl sm:rounded-[28px] overflow-hidden shadow-lg aspect-[4/5] bg-gray-200">
                   <img
-                    src="https://images.unsplash.com/photo-1573164574511-73c773193279?w=600&q=80"
-                    alt="Corporate collaboration at Ecore office"
+                    src="/assets/standing%20(1).jpg"
+                    alt="Ecore representatives standing outside a building"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -153,8 +153,8 @@ export default function AboutSection() {
               <div className="sm:col-span-7 mt-4 sm:mt-0">
                 <div className="rounded-2xl sm:rounded-[32px] overflow-hidden shadow-xl aspect-[4/5] bg-gray-200 border border-white">
                   <img
-                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
-                    alt="Mining engineers and executives discussing mineral data on tablet outdoors"
+                    src="/assets/standing%20(2).jpg"
+                    alt="Ecore team standing at an industrial equipment exhibition"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                   />
                 </div>

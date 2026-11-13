@@ -70,9 +70,12 @@ export default function ContactSection() {
                   <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
                     Direct Exploration Desk
                   </h4>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-900">
-                    contact@ecoreminerals.com
-                  </p>
+                  <a
+                    href="mailto:gud2una@gmail.com"
+                    className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-emerald-700 transition-colors"
+                  >
+                    gud2una@gmail.com
+                  </a>
                   <p className="text-[11px] sm:text-xs text-gray-500 mt-0.5">
                     Operating Hours: Mon – Fri (08:00 – 17:00 WAT)
                   </p>
