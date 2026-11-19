@@ -7,38 +7,38 @@ const products = [
     name: 'Lithium',
     tagline: 'Battery Grade Lithium',
     description:
-      'A soft silvery-white alkali metal, valuable for the production of EV batteries, ceramics, aluminum products and glass. Ecore targets highly prospective Spodumene and brine mining assets in the Central Nigeria Lithium Belt.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-    color: 'from-green-500/20 to-green-600/5',
-    accent: '#5AE05A',
+      'A soft silvery white alkali metal. It is an element valuable for the production of batteries, ceramics, aluminum products and glass.',
+    image: '/assets/Lithium.jpg',
+    color: 'from-amber-500/20 to-amber-600/5',
+    accent: '#D4AF37',
   },
   {
     id: '02',
     name: 'Graphite',
     tagline: 'EV Battery Material',
     description:
-      'An important material for Electric Vehicle (EV) battery manufacturing. An excellent conductor of heat and electricity and also has the highest strength of any natural material.',
-    image: 'https://images.unsplash.com/photo-1612178537253-bccd437b730e?w=600&q=80',
+      'An important material for the Electric Vehicle (EV) battery manufacturing. An excellent conductor of heat and electricity and also has the highest strength of any natural material.',
+    image: '/assets/graphite.jpg',
     color: 'from-slate-500/20 to-slate-600/5',
-    accent: '#888',
+    accent: '#1D4ED8',
   },
   {
     id: '03',
     name: 'Gold',
     tagline: 'Precious Metal',
     description:
-      'A dense, soft, bright yellow precious metal (AU, atomic number 79). Primary uses are jewelry, reserves and investment, electronics and medicine.',
-    image: 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&q=80',
+      'A dense, soft, bright yellow precious metal with the chemical symbol AU and atomic number 79. The primary uses are jewelry, reserves and investment, electronics and medicine.',
+    image: '/assets/gold.jpg',
     color: 'from-amber-500/20 to-amber-600/5',
-    accent: '#F59E0B',
+    accent: '#D4AF37',
   },
   {
     id: '04',
     name: 'Coal',
     tagline: 'Industrial Energy',
     description:
-      'Used primarily across the globe to produce energy and generate electricity to run industrial plants and factories. A combustible rock widely used for electricity and industrial applications.',
-    image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80',
+      'Used primarily across the globe to produce energy to generate electricity and run industrial plants and factories. Coal is a combustible black or brown rock used widely for electricity despite its known high carbon emission.',
+    image: '/assets/coal.jpg',
     color: 'from-gray-700/20 to-gray-800/5',
     accent: '#555',
   },
@@ -120,17 +120,8 @@ export default function ProductsSection() {
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <div className="w-5 h-px bg-[#5AE05A]" />
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-gray-500">
-                Products & Services
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0D0D0D] leading-tight max-w-lg">
-              Strategic Minerals for a
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">
-                Greener Future.
-              </span>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-[#1D4ED8] leading-[1.05] tracking-tight">
+              Products and Services
             </h2>
           </div>
           <div
@@ -138,8 +129,8 @@ export default function ProductsSection() {
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
-              Ecore offers the best grade of strategic minerals. As the world transitions to a decarbonized future, we supply critical materials essential to battery production and energy storage.
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+              Ecore offers the best grade of strategic minerals. As the world transitions to a decarbonized future and green energy, the switch to EVs is creating huge market and demand for batteries and for strategic minerals such as lithium, graphite and coal. These are critical minerals available to the global markets in large quantities essential to battery production and other energy needs. We have acquired the exclusive right to develop two proven lithium sites located in the FCT/Nasarawa lithium Belt and Taraba State which hosts globally significant lithium deposit.
             </p>
           </div>
         </div>
@@ -151,26 +142,26 @@ export default function ProductsSection() {
           ))}
         </div>
 
-        {/* Kuje Project Feature */}
+        {/* Lugbe Project Feature */}
         <div
           className={`mt-12 sm:mt-16 relative rounded-2xl sm:rounded-3xl overflow-hidden transition-all duration-700 delay-300 ${
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
           <div className="bg-[#0D0D0D] p-6 sm:p-10 lg:p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 to-transparent pointer-events-none" />
-            <div className="absolute top-0 right-0 w-72 h-72 bg-green-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A8A]/30 to-transparent pointer-events-none" />
+            <div className="absolute top-0 right-0 w-72 h-72 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
             
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7">
-                <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-full px-3.5 py-1.5 mb-4 sm:mb-6">
-                  <span className="w-1.5 h-1.5 bg-[#5AE05A] rounded-full" />
-                  <span className="text-[#5AE05A] text-[10px] sm:text-xs font-semibold uppercase tracking-widest">
+                <div className="inline-flex items-center gap-2 bg-[#D4AF37]/15 border border-[#D4AF37]/30 rounded-full px-3.5 py-1.5 mb-4 sm:mb-6">
+                  <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full" />
+                  <span className="text-[#B8941F] text-[10px] sm:text-xs font-semibold uppercase tracking-widest">
                     Featured Project
                   </span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4">
-                  The Kuje Project
+                  The Lugbe Project
                 </h3>
                 <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-6 max-w-xl">
                   Lies within the eastern boundaries of Abuja, Federal Capital Territory. The project spans a contiguous 600,000 hectares (~6 sq km) with distinct near-surface Lithium mineralization scale potential.
@@ -199,11 +190,11 @@ export default function ProductsSection() {
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-sm">
                   <img
-                    src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80"
-                    alt="Kuje mining and lithium exploration site"
+                    src="/assets/forest.jpg"
+                    alt="Taraba belt forest site"
                     className="rounded-2xl w-full h-48 sm:h-56 object-cover shadow-lg"
                   />
-                  <div className="absolute -bottom-3 -left-3 bg-[#5AE05A] rounded-xl px-3 sm:px-4 py-2 shadow-md">
+                  <div className="absolute -bottom-3 -left-3 bg-[#D4AF37] rounded-xl px-3 sm:px-4 py-2 shadow-md">
                     <p className="text-black text-[11px] sm:text-xs font-black uppercase tracking-wide">
                       Taraba Belt
                     </p>

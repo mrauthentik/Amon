@@ -2,23 +2,26 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a0a0a] text-white pt-16 sm:pt-20 pb-10 sm:pb-12 border-t border-white/10 relative overflow-hidden">
       {/* Subtle background glow */}
-      <div className="absolute bottom-0 right-1/4 w-[350px] sm:w-[500px] h-[250px] sm:h-[300px] bg-[#5AE05A]/5 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[350px] sm:w-[500px] h-[250px] sm:h-[300px] bg-[#D4AF37]/5 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 pb-12 sm:pb-16 border-b border-white/10">
           
           {/* Brand Info with Logo */}
           <div className="sm:col-span-2 lg:col-span-5">
-            <a href="#hero" className="inline-flex items-center gap-2.5 mb-5 sm:mb-6 group">
-              <div className="bg-white px-2.5 py-1 sm:py-1.5 rounded-lg shadow-sm group-hover:scale-105 transition-transform flex items-center justify-center">
-                <img
-                  src="/assets/extracted_p1_0.png"
-                  alt="Ecore Logo"
-                  className="h-6 sm:h-7 w-auto object-contain"
-                />
-              </div>
-              <span className="text-white font-bold text-sm sm:text-base tracking-widest text-white/90">
-                LTD.
+            <a href="#hero" className="inline-flex items-center gap-3 mb-5 sm:mb-6 group">
+              <img
+                src="/assets/ecore_logo_white.png"
+                alt="Ecore Logo"
+                className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
+              <span className="flex flex-col leading-none">
+                <span className="text-white font-extrabold text-base sm:text-lg tracking-[0.2em]">
+                  ECORE
+                </span>
+                <span className="text-[#D4AF37] font-bold text-[10px] sm:text-xs tracking-[0.3em]">
+                  LTD
+                </span>
               </span>
             </a>
 
@@ -28,8 +31,8 @@ export default function Footer() {
               Headquartered in Abuja FCT, West Africa. Founded in 2023.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-[11px] text-[#5AE05A]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#5AE05A]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-[11px] text-[#D4AF37]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
               CAC Registered & Licensed Operator
             </div>
           </div>
@@ -112,11 +115,14 @@ export default function Footer() {
               Wuse 2, Abuja, FCT<br />
               Nigeria, West Africa
             </p>
-            <p className="text-[11px] sm:text-xs text-gray-400 mb-1.5">
-              <span className="text-gray-500">Asset Corridor:</span> Central Nigeria Lithium Belt & Kuje
+            <p className="text-xs sm:text-sm font-semibold text-white mb-1.5">
+              <span className="text-gray-500 font-normal">Phone:</span> +234(0) 803 155 8383 &nbsp;|&nbsp; +234(0) 813 050 0053
             </p>
-            <p className="text-[11px] sm:text-xs text-gray-400">
-              <span className="text-gray-500">Partner:</span> DAROO Limited (Lugbe Project)
+            <p className="text-[11px] sm:text-xs text-gray-400 mb-1.5">
+              <span className="text-gray-500">Asset Corridor:</span> Central Nigeria Lithium Belt & Lugbe
+            </p>
+            <p className="text-sm sm:text-base font-bold text-[#D4AF37]">
+              <span className="text-gray-400 font-normal text-[11px] sm:text-xs uppercase tracking-wider">Partner:</span> DAROO Limited (Lugbe Project)
             </p>
           </div>
 

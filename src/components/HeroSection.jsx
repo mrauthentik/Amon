@@ -25,8 +25,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
 
-      {/* Subtle green ambient lighting */}
-      <div className="absolute top-1/4 right-1/4 w-[320px] sm:w-[500px] h-[320px] sm:h-[500px] bg-[#5AE05A]/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      {/* Subtle gold & blue ambient lighting */}
+      <div className="absolute top-1/4 right-1/4 w-[320px] sm:w-[500px] h-[320px] sm:h-[500px] bg-[#D4AF37]/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-[280px] sm:w-[420px] h-[280px] sm:h-[420px] bg-[#1D4ED8]/15 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
       {/* Main Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -92,7 +93,7 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-black/40 border border-white/20 backdrop-blur-sm text-white text-[10px] sm:text-[11px] font-bold tracking-[0.15em] uppercase hover:border-white hover:bg-black/60 transition-all duration-300"
               >
                 <span>EXPLORE MORE</span>
-                <ArrowUpRight className="w-4 h-4 text-[#5AE05A]" />
+                <ArrowUpRight className="w-4 h-4 text-[#D4AF37]" />
               </a>
             </div>
           </div>

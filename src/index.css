@@ -12,7 +12,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-gray-900 font-sans antialiased;
+    @apply bg-white text-black font-sans antialiased;
     overflow-x: hidden;
     width: 100%;
   }
@@ -32,7 +32,7 @@
     @apply inline-flex items-center gap-1.5 border border-gray-300 text-gray-700 text-[10px] font-semibold uppercase tracking-widest px-4 py-2.5 rounded-full transition-all duration-300 hover:border-[#0D0D0D] hover:text-[#0D0D0D] hover:scale-105;
   }
   .nav-link {
-    @apply text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#5AE05A] after:transition-all after:duration-300 hover:after:w-full;
+    @apply text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#D4AF37] after:transition-all after:duration-300 hover:after:w-full;
   }
   .nav-link-dark {
     @apply text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200;
@@ -61,8 +61,11 @@
   .gradient-text {
     @apply bg-gradient-to-r from-[#0D0D0D] to-[#555] bg-clip-text text-transparent;
   }
-  .gradient-text-green {
-    @apply bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent;
+  .gradient-text-gold {
+    @apply bg-gradient-to-r from-[#B8941F] to-[#D4AF37] bg-clip-text text-transparent;
+  }
+  .gradient-text-blue {
+    @apply bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6] bg-clip-text text-transparent;
   }
 }
 

@@ -5,10 +5,10 @@ const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'About Us', href: '#about' },
   { label: 'Products', href: '#products' },
-  { label: 'Operations & Fleet', href: '#operations' },
-  { label: 'Our Expert', href: '#expert' },
+  { label: 'Leadership', href: '#leadership' },
   { label: 'Sustainability', href: '#sustainability' },
   { label: 'Investment', href: '#investment' },
+  { label: 'Social Responsibility', href: '#social-responsibility' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -35,16 +35,19 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo - Reduced size */}
-        <a href="#hero" className="flex items-center gap-2 group">
-          <div className="bg-white px-2 py-0.5 sm:py-1 rounded-md shadow-sm group-hover:scale-105 transition-transform flex items-center justify-center">
-            <img
-              src="/assets/extracted_p1_0.png"
-              alt="Ecore Logo"
-              className="h-5 sm:h-6 w-auto object-contain"
-            />
-          </div>
-          <span className="text-white font-bold text-xs sm:text-sm tracking-widest text-white/90">
-            LTD.
+        <a href="#hero" className="flex items-center gap-3 group">
+          <img
+            src="/assets/ecore_logo_white.png"
+            alt="Ecore Logo"
+            className="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform"
+          />
+          <span className="flex flex-col leading-none">
+            <span className="text-[#1D4ED8] font-extrabold text-sm sm:text-base tracking-[0.2em]">
+              ECORE
+            </span>
+            <span className="text-[#D4AF37] font-bold text-[9px] sm:text-[10px] tracking-[0.3em]">
+              LTD
+            </span>
           </span>
         </a>
 
@@ -54,7 +57,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-[11px] xl:text-xs font-medium uppercase tracking-wider text-white/80 hover:text-white transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#5AE05A] after:transition-all after:duration-300 hover:after:w-full"
+              className="text-[11px] xl:text-xs font-medium uppercase tracking-wider text-white/80 hover:text-white transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </a>
@@ -63,7 +66,7 @@ export default function Navbar() {
 
         {/* Mobile Hamburger Button */}
         <button
-          className="lg:hidden p-2 text-white hover:text-[#5AE05A] transition-colors focus:outline-none"
+          className="lg:hidden p-2 text-white hover:text-[#D4AF37] transition-colors focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
         >
@@ -86,7 +89,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="block py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-[#5AE05A] border-b border-white/5 transition-colors"
+              className="block py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-[#D4AF37] border-b border-white/5 transition-colors"
               onClick={handleNavClick}
             >
               {link.label}

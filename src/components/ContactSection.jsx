@@ -19,23 +19,15 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden">
       {/* Background soft ambient gradient */}
-      <div className="absolute top-10 right-10 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-green-50/70 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
+      <div className="absolute top-10 right-10 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-[#D4AF37]/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           
           {/* Left Column: Office Details & Brand Statement */}
           <div className="lg:col-span-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5 border border-black/10 text-gray-800 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-              Connect With Ecore
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4 sm:mb-6">
-              Let's Build the
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-500">
-                Next Energy Frontier.
-              </span>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-[#1D4ED8] tracking-tight leading-[1.05] mb-4 sm:mb-6">
+              Contact
             </h2>
 
             <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-8 sm:mb-10">
@@ -47,7 +39,7 @@ export default function ContactSection() {
             {/* Address & Info Cards */}
             <div className="space-y-4 mb-8 sm:mb-10">
               <div className="flex items-start gap-4 p-4 sm:p-5 rounded-2xl bg-gray-50 border border-gray-100 hover:border-gray-300 transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 text-emerald-600 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 text-[#B8941F] shadow-sm">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -63,7 +55,7 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-start gap-4 p-4 sm:p-5 rounded-2xl bg-gray-50 border border-gray-100 hover:border-gray-300 transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 text-emerald-600 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 text-[#B8941F] shadow-sm">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -72,7 +64,7 @@ export default function ContactSection() {
                   </h4>
                   <a
                     href="mailto:gud2una@gmail.com"
-                    className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-emerald-700 transition-colors"
+                    className="text-xs sm:text-sm font-semibold text-gray-900 hover:text-[#B8941F] transition-colors"
                   >
                     gud2una@gmail.com
                   </a>
@@ -81,15 +73,38 @@ export default function ContactSection() {
                   </p>
                 </div>
               </div>
+
+              <div className="flex items-start gap-4 p-4 sm:p-5 rounded-2xl bg-gray-50 border border-gray-100 hover:border-gray-300 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 text-[#1D4ED8] shadow-sm">
+                  <Clock className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
+                    Phone Lines
+                  </h4>
+                  <a
+                    href="tel:+2348031558383"
+                    className="block text-xs sm:text-sm font-semibold text-gray-900 hover:text-[#B8941F] transition-colors"
+                  >
+                    +234(0) 803 155 8383
+                  </a>
+                  <a
+                    href="tel:+2348130500053"
+                    className="block text-xs sm:text-sm font-semibold text-gray-900 hover:text-[#B8941F] transition-colors"
+                  >
+                    +234(0) 813 050 0053
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Operating hubs pill badge */}
             <div className="p-4 sm:p-5 rounded-2xl bg-[#0d0d0d] text-white">
-              <span className="text-[9px] sm:text-[10px] font-bold text-[#5AE05A] uppercase tracking-widest block mb-2">
+              <span className="text-[9px] sm:text-[10px] font-bold text-[#D4AF37] uppercase tracking-widest block mb-2">
                 Operational Assets
               </span>
               <p className="text-xs text-gray-300">
-                • <strong>Kuje Project</strong> (600,000 Ha, Abuja FCT Boundary)
+                • <strong>Lugbe Project</strong> (600,000 Ha, Abuja FCT Boundary)
               </p>
               <p className="text-xs text-gray-300 mt-1">
                 • <strong>Central Nigeria Lithium Belt & Taraba Sites</strong>
@@ -110,8 +125,8 @@ export default function ContactSection() {
               </div>
 
               {submitted ? (
-                <div className="p-6 sm:p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-center animate-fade-in">
-                  <div className="w-12 h-12 bg-[#22c55e] text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <div className="p-6 sm:p-8 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-center animate-fade-in">
+                  <div className="w-12 h-12 bg-[#D4AF37] text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
                     <CheckCircle2 className="w-7 h-7 text-white" />
                   </div>
                   <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
@@ -142,7 +157,7 @@ export default function ContactSection() {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                       />
                     </div>
                     <div>
@@ -157,7 +172,7 @@ export default function ContactSection() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                       />
                     </div>
                   </div>
@@ -174,7 +189,7 @@ export default function ContactSection() {
                         onChange={(e) =>
                           setFormData({ ...formData, company: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                       />
                     </div>
                     <div>
@@ -186,7 +201,7 @@ export default function ContactSection() {
                         onChange={(e) =>
                           setFormData({ ...formData, interest: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                       >
                         <option value="Offtake Agreement">Lithium / Mineral Offtake</option>
                         <option value="Investment Opportunity">Universal Investment (ROI)</option>
@@ -209,16 +224,16 @@ export default function ContactSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 sm:py-4 rounded-xl bg-[#0d0d0d] text-white text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase hover:bg-black hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group"
+                    className="w-full py-3.5 sm:py-4 rounded-xl bg-black text-white text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#1a1a1a] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group"
                   >
                     <span>Submit Inquiry</span>
-                    <ArrowUpRight className="w-4 h-4 text-[#5AE05A] transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-4 h-4 text-[#D4AF37] transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </button>
                 </form>
               )}
