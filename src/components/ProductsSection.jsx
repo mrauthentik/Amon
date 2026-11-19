@@ -18,7 +18,7 @@ const products = [
     tagline: 'EV Battery Material',
     description:
       'An important material for the Electric Vehicle (EV) battery manufacturing. An excellent conductor of heat and electricity and also has the highest strength of any natural material.',
-    image: '/assets/graphite.jpg',
+    image: '/assets/graphite.webp',
     color: 'from-slate-500/20 to-slate-600/5',
     accent: '#1D4ED8',
   },
@@ -120,7 +120,7 @@ export default function ProductsSection() {
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-[#1D4ED8] leading-[1.05] tracking-tight">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase text-[#1D4ED8] leading-[1.05] tracking-tight">
               Products and Services
             </h2>
           </div>

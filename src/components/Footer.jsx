@@ -16,7 +16,7 @@ export default function Footer() {
                 className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform"
               />
               <span className="flex flex-col leading-none">
-                <span className="text-white font-extrabold text-base sm:text-lg tracking-[0.2em]">
+                <span className="text-[#1D4ED8] font-extrabold text-base sm:text-lg tracking-[0.2em]">
                   ECORE
                 </span>
                 <span className="text-[#D4AF37] font-bold text-[10px] sm:text-xs tracking-[0.3em]">

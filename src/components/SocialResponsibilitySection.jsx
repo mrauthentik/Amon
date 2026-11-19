@@ -68,7 +68,7 @@ export default function SocialResponsibilitySection() {
         {/* Section Header */}
         <div className="max-w-4xl mb-12 sm:mb-16">
           <h2
-            className={`text-4xl sm:text-6xl md:text-7xl font-black text-[#1D4ED8] tracking-tight leading-[1.05] mb-6 sm:mb-8 transition-all duration-700 ${
+            className={`text-4xl sm:text-6xl md:text-7xl font-black uppercase text-[#1D4ED8] tracking-tight leading-[1.05] mb-6 sm:mb-8 transition-all duration-700 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >

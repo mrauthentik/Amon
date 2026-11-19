@@ -28,19 +28,16 @@ export default function InvestmentSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end mb-12 sm:mb-16">
-          <div
-            className={`lg:col-span-8 transition-all duration-700 ${
-              visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-[#1D4ED8] tracking-tight leading-[1.05]">
-              Universal Investment Opportunity
-            </h2>
-          </div>
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase text-[#1D4ED8] tracking-tight leading-[1.05] max-w-4xl">
+            Universal Investment Opportunity
+          </h2>
+        </div>
 
+        {/* Intro text + Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
           <div
-            className={`lg:col-span-4 transition-all duration-700 delay-150 ${
+            className={`lg:col-span-7 transition-all duration-700 delay-150 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -54,6 +51,19 @@ export default function InvestmentSection() {
               sector through favorable tax incentives and ownership. It supports local
               processing and beneficiation.
             </p>
+          </div>
+          <div
+            className={`lg:col-span-5 transition-all duration-700 delay-200 ${
+              visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-200 border border-white">
+              <img
+                src="/assets/extracted_p5_0.jpeg"
+                alt="Ecore investment opportunity"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
 

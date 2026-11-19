@@ -26,7 +26,7 @@ export default function ContactSection() {
           
           {/* Left Column: Office Details & Brand Statement */}
           <div className="lg:col-span-5">
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-[#1D4ED8] tracking-tight leading-[1.05] mb-4 sm:mb-6">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase text-[#1D4ED8] tracking-tight leading-[1.05] mb-4 sm:mb-6">
               Contact
             </h2>
 

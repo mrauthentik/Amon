@@ -32,7 +32,7 @@ export default function AboutSection() {
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 sm:gap-8 mb-12 sm:mb-16">
           <div className="max-w-2xl">
             <h2
-              className={`text-4xl sm:text-6xl md:text-7xl lg:text-[72px] font-black text-[#1D4ED8] leading-[1.05] tracking-tight transition-all duration-700 ${
+              className={`text-4xl sm:text-6xl md:text-7xl lg:text-[72px] font-black uppercase text-[#1D4ED8] leading-[1.05] tracking-tight transition-all duration-700 ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
@@ -145,13 +145,13 @@ export default function AboutSection() {
         {/* MISSION */}
         <div className="mt-16 sm:mt-24 pt-12 sm:pt-16 border-t border-gray-200">
           <h2
-            className={`text-4xl sm:text-6xl md:text-7xl font-black text-[#1D4ED8] leading-[1.05] tracking-tight mb-6 sm:mb-8 transition-all duration-700 ${
+            className={`text-4xl sm:text-6xl md:text-7xl font-black uppercase text-[#1D4ED8] leading-[1.05] tracking-tight mb-6 sm:mb-8 transition-all duration-700 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
             Mission
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7">
               <div className="space-y-4 text-gray-700 text-xs sm:text-[14.5px] leading-relaxed">
                 <p>
@@ -168,13 +168,22 @@ export default function AboutSection() {
                 </p>
               </div>
             </div>
+            <div className="lg:col-span-5">
+              <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-200 border border-white">
+                <img
+                  src="/assets/extracted_p2_0.jpeg"
+                  alt="Ecore mission"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* VISION */}
         <div className="mt-14 sm:mt-20 pt-12 sm:pt-16 border-t border-gray-200">
           <h2
-            className={`text-4xl sm:text-6xl md:text-7xl font-black text-[#1D4ED8] leading-[1.05] tracking-tight mb-6 sm:mb-8 transition-all duration-700 ${
+            className={`text-4xl sm:text-6xl md:text-7xl font-black uppercase text-[#1D4ED8] leading-[1.05] tracking-tight mb-6 sm:mb-8 transition-all duration-700 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
