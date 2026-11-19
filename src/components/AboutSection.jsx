@@ -64,7 +64,7 @@ export default function AboutSection() {
         </div>
 
         {/* Content & Image Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: About text */}
           <div
             className={`lg:col-span-5 transition-all duration-700 delay-100 ${
@@ -131,7 +131,7 @@ export default function AboutSection() {
                   <ArrowUpLeft className="w-5 h-5 text-[#D4AF37]" />
                 </div>
               </div>
-              <div className="rounded-2xl sm:rounded-[32px] overflow-hidden shadow-xl aspect-[4/3] bg-gray-200 border border-white">
+              <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-200 border border-white">
                 <img
                   src="/assets/standing%20(2).jpg"
                   alt="Ecore representatives standing outside a building"
@@ -151,7 +151,7 @@ export default function AboutSection() {
           >
             Mission
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7">
               <div className="space-y-4 text-gray-700 text-xs sm:text-[14.5px] leading-relaxed">
                 <p>
@@ -181,7 +181,7 @@ export default function AboutSection() {
         </div>
 
         {/* VISION */}
-        <div className="mt-14 sm:mt-20 pt-12 sm:pt-16 border-t border-gray-200">
+        <div className="mt-16 sm:mt-24 pt-12 sm:pt-16 border-t border-gray-200">
           <h2
             className={`text-4xl sm:text-6xl md:text-7xl font-black uppercase text-[#1D4ED8] leading-[1.05] tracking-tight mb-6 sm:mb-8 transition-all duration-700 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -189,7 +189,7 @@ export default function AboutSection() {
           >
             Vision
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-7">
               <div className="space-y-4 text-gray-700 text-xs sm:text-[14.5px] leading-relaxed">
                 <p>

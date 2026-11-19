@@ -68,7 +68,7 @@ export default function InvestmentSection() {
         </div>
 
         {/* 3 Value Proposition Cards - No Emojis, Clean Lucide Icons */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {[
             {
               title: 'Booming Macro-Trends',
